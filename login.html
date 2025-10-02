@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <section class="vh-100 d-flex align-items-center justify-content-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card p-4">
+              <h2 class="text-center mb-4">Login</h2>
+              <form id="loginForm">
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary">Log In</button>
+                </div>
+              </form>
+              <p class="text-center mt-3 mb-0">
+                <a href="createaccount.html">Don't have an account? Sign up</a>
+              </p>
+              <p class="text-center mt-2 text-muted" id="message"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // stop form from refreshing
+
+        const savedUsername = sessionStorage.getItem("username");
+        const savedPassword = sessionStorage.getItem("password");
+
+        const username = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        if (username === savedUsername && password === savedPassword) {
+          document.getElementById("message").textContent = "✅ Login successful!";
+          document.getElementById("message").classList.remove("text-danger");
+          document.getElementById("message").classList.add("text-success");
+
+          // Example: redirect to welcome.html after 1.5s
+          setTimeout(() => {
+            window.location.href = "welcome.html";
+          }, 1500);
+        } else {
+          document.getElementById("message").textContent = "❌ Invalid credentials.";
+          document.getElementById("message").classList.remove("text-success");
+          document.getElementById("message").classList.add("text-danger");
+        }
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
