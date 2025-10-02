@@ -40,7 +40,7 @@
 
     <script>
       document.getElementById("loginForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // stop form from refreshing
+        event.preventDefault(); 
 
         const savedUsername = sessionStorage.getItem("username");
         const savedPassword = sessionStorage.getItem("password");
@@ -53,10 +53,9 @@
           document.getElementById("message").classList.remove("text-danger");
           document.getElementById("message").classList.add("text-success");
 
-          // ✅ redirect to home.html after 1.5s
           setTimeout(() => {
             window.location.href = "home.html";
-          }, 1500);
+          }, 500);
         } else {
           document.getElementById("message").textContent = "Invalid credentials.";
           document.getElementById("message").classList.remove("text-success");
