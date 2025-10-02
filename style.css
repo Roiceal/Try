@@ -93,7 +93,10 @@ a:hover {
 }
 
 /* 🔹 Landing page sections */
-section {
+#section1, 
+#section2, 
+#section3, 
+#section4 {
   height: 100vh; 
   display: flex;
   justify-content: center;
