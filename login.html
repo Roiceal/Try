@@ -17,8 +17,8 @@
               <h2 class="text-center mb-4">Login</h2>
               <form id="loginForm">
                 <div class="mb-3">
-                  <label for="email" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+                  <label for="username" class="form-label">Username</label>
+                  <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" required>
                 </div>
                 <div class="mb-3">
                   <label for="password" class="form-label">Password</label>
@@ -45,11 +45,11 @@
         const savedUsername = sessionStorage.getItem("username");
         const savedPassword = sessionStorage.getItem("password");
 
-        const username = document.getElementById("email").value;
+        const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
 
         if (username === savedUsername && password === savedPassword) {
-          document.getElementById("message").textContent = "✅ Login successful!";
+          document.getElementById("message").textContent = "Login successful!";
           document.getElementById("message").classList.remove("text-danger");
           document.getElementById("message").classList.add("text-success");
 
@@ -58,7 +58,7 @@
             window.location.href = "welcome.html";
           }, 1500);
         } else {
-          document.getElementById("message").textContent = "❌ Invalid credentials.";
+          document.getElementById("message").textContent = "Invalid credentials.";
           document.getElementById("message").classList.remove("text-success");
           document.getElementById("message").classList.add("text-danger");
         }
