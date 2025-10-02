@@ -40,22 +40,21 @@
 
   <script>
     document.getElementById("signupForm").addEventListener("submit", function(event) {
-      event.preventDefault(); // stop form from submitting
+      event.preventDefault(); 
 
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
 
       if (username && password) {
-        // Save data in sessionStorage (temporary, clears on tab close)
+        
         sessionStorage.setItem("username", username);
         sessionStorage.setItem("password", password);
 
         document.getElementById("message").textContent = "Please wait... Redirecting to login";
 
-        // Redirect to login.html after 1.5 seconds
         setTimeout(() => {
           window.location.href = "login.html";
-        }, 1500);
+        }, 500);
       } else {
         document.getElementById("message").textContent = "⚠️ Please fill in both fields.";
       }
