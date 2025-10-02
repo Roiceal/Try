@@ -111,6 +111,7 @@ a:hover {
 #section4 {
   height: 100vh; 
   display: flex;
+  text-align: center;
   justify-content: center;
   align-items: center;
   color: white;
