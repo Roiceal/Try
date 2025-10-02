@@ -17,8 +17,8 @@
             <h2 class="text-center mb-4">Create Account</h2>
             <form id="signupForm">
               <div class="mb-3">
-                <label for="email" class="form-label">Username (Email)</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Enter username/email" required>
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" required>
               </div>
               <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
@@ -42,12 +42,12 @@
     document.getElementById("signupForm").addEventListener("submit", function(event) {
       event.preventDefault(); // stop form from submitting
 
-      const email = document.getElementById("email").value;
+      const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
 
-      if (email && password) {
+      if (username && password) {
         // Save data in sessionStorage (temporary, clears on tab close)
-        sessionStorage.setItem("username", email);
+        sessionStorage.setItem("username", username);
         sessionStorage.setItem("password", password);
 
         document.getElementById("message").textContent = "Please wait... Redirecting to login";
