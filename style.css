@@ -92,6 +92,38 @@ a:hover {
   text-decoration: underline;
 }
 
+/* 🔹 Landing page sections */
+section {
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#section1 { background-color: #3498db; } /* Blue */
+#section2 { background-color: #2ecc71; } /* Green */
+#section3 { background-color: #e74c3c; } /* Red */
+#section4 { background-color: #9b59b6; } /* Purple */
+
+/* 🔹 Logout button */
+.logout {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.logout:hover {
+  background: #555;
+}
+
+
 /* 🔹 Responsive breakpoints */
 @media (max-width: 576px) {
   h2 { font-size: 22px; }
