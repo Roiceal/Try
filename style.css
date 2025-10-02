@@ -34,7 +34,7 @@ h2 {
 #message {
   font-size: 14px;
   font-style: italic;
-  color: #ffcccc; /* lighter red for error visibility */
+  color: #ffcccc;
 }
 
 /* 🔹 Glass effect card */
@@ -92,6 +92,18 @@ a:hover {
   text-decoration: underline;
 }
 
+/* 🔹 Special small link for login/register */
+.login-link {
+  font-size: 14px;
+  font-weight: normal;
+  color: #aadfff;
+}
+
+.login-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
 /* 🔹 Landing page sections */
 #section1, 
 #section2, 
@@ -106,10 +118,10 @@ a:hover {
   font-weight: bold;
 }
 
-#section1 { background-color: #3498db; } /* Blue */
-#section2 { background-color: #2ecc71; } /* Green */
-#section3 { background-color: #e74c3c; } /* Red */
-#section4 { background-color: #9b59b6; } /* Purple */
+#section1 { background-color: #3498db; }
+#section2 { background-color: #2ecc71; }
+#section3 { background-color: #e74c3c; }
+#section4 { background-color: #9b59b6; }
 
 /* 🔹 Logout button */
 .logout {
@@ -125,7 +137,6 @@ a:hover {
 .logout:hover {
   background: #555;
 }
-
 
 /* 🔹 Responsive breakpoints */
 @media (max-width: 576px) {
