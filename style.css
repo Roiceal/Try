@@ -1,0 +1,141 @@
+/* Center section alignment */
+.vh-100 {
+  height: 100vh;
+}
+
+/* Title style */
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Input fields */
+.form-control {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(0, 123, 255, 0.6);
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+}
+
+/* Labels */
+.form-label {
+  font-weight: 500;
+  color: #eaeaea;
+  margin-bottom: 6px;
+}
+
+/* Submit button */
+.btn-primary {
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.9), rgba(0, 180, 255, 0.9));
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, rgba(0, 123, 255, 1), rgba(0, 180, 255, 1));
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+}
+
+/* Link */
+a {
+  color: #aadfff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Redirect message */
+#message {
+  font-size: 14px;
+  font-style: italic;
+  color: #ddd;
+}
+
+@media (max-width: 576px) {
+  h2 {
+    font-size: 22px;
+  }
+  .form-control {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .btn-primary {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .glass-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 26px;
+  }
+  .form-control {
+    font-size: 15px;
+    padding: 11px;
+  }
+  .btn-primary {
+    font-size: 15px;
+    padding: 11px;
+  }
+  .glass-card {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 992px) {
+  h2 {
+    font-size: 28px;
+  }
+  .form-control {
+    font-size: 16px;
+    padding: 12px;
+  }
+  .btn-primary {
+    font-size: 16px;
+    padding: 12px;
+  }
+  .glass-card {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  h2 {
+    font-size: 30px;
+  }
+  .form-control {
+    font-size: 16px;
+    padding: 12px;
+  }
+  .btn-primary {
+    font-size: 16px;
+    padding: 12px;
+  }
+  .glass-card {
+    padding: 35px;
+  }
+}
