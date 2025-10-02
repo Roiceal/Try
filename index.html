@@ -17,12 +17,8 @@
             <h2 class="text-center mb-4">Create Account</h2>
             <form id="signupForm">
               <div class="mb-3">
-                <label for="fullname" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Full name" required>
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                <label for="email" class="form-label">Username (Email)</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter username/email" required>
               </div>
               <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
@@ -46,13 +42,11 @@
     document.getElementById("signupForm").addEventListener("submit", function(event) {
       event.preventDefault(); // stop form from submitting
 
-      const fullname = document.getElementById("fullname").value;
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
 
-      if (fullname && email && password) {
+      if (email && password) {
         // Save data in sessionStorage (temporary, clears on tab close)
-        sessionStorage.setItem("fullname", fullname);
         sessionStorage.setItem("username", email);
         sessionStorage.setItem("password", password);
 
@@ -63,7 +57,7 @@
           window.location.href = "login.html";
         }, 1500);
       } else {
-        document.getElementById("message").textContent = "⚠️ Please fill in all fields.";
+        document.getElementById("message").textContent = "⚠️ Please fill in both fields.";
       }
     });
   </script>
