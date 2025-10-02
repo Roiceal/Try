@@ -34,7 +34,18 @@ h2 {
 #message {
   font-size: 14px;
   font-style: italic;
-  color: #ddd;
+  color: #ffcccc; /* lighter red for error visibility */
+}
+
+/* 🔹 Glass effect card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  color: #fff;
 }
 
 .form-control {
@@ -81,70 +92,31 @@ a:hover {
   text-decoration: underline;
 }
 
+/* 🔹 Responsive breakpoints */
 @media (max-width: 576px) {
-  h2 {
-    font-size: 22px;
-  }
-  .form-control {
-    font-size: 14px;
-    padding: 10px;
-  }
-  .btn-primary {
-    font-size: 14px;
-    padding: 10px;
-  }
-  .glass-card {
-    padding: 20px;
-  }
+  h2 { font-size: 22px; }
+  .form-control { font-size: 14px; padding: 10px; }
+  .btn-primary { font-size: 14px; padding: 10px; }
+  .glass-card { padding: 20px; }
 }
 
 @media (max-width: 768px) {
-  h2 {
-    font-size: 26px;
-  }
-  .form-control {
-    font-size: 15px;
-    padding: 11px;
-  }
-  .btn-primary {
-    font-size: 15px;
-    padding: 11px;
-  }
-  .glass-card {
-    padding: 25px;
-  }
+  h2 { font-size: 26px; }
+  .form-control { font-size: 15px; padding: 11px; }
+  .btn-primary { font-size: 15px; padding: 11px; }
+  .glass-card { padding: 25px; }
 }
 
 @media (max-width: 992px) {
-  h2 {
-    font-size: 28px;
-  }
-  .form-control {
-    font-size: 16px;
-    padding: 12px;
-  }
-  .btn-primary {
-    font-size: 16px;
-    padding: 12px;
-  }
-  .glass-card {
-    padding: 30px;
-  }
+  h2 { font-size: 28px; }
+  .form-control { font-size: 16px; padding: 12px; }
+  .btn-primary { font-size: 16px; padding: 12px; }
+  .glass-card { padding: 30px; }
 }
 
 @media (max-width: 1200px) {
-  h2 {
-    font-size: 30px;
-  }
-  .form-control {
-    font-size: 16px;
-    padding: 12px;
-  }
-  .btn-primary {
-    font-size: 16px;
-    padding: 12px;
-  }
-  .glass-card {
-    padding: 35px;
-  }
+  h2 { font-size: 30px; }
+  .form-control { font-size: 16px; padding: 12px; }
+  .btn-primary { font-size: 16px; padding: 12px; }
+  .glass-card { padding: 35px; }
 }
