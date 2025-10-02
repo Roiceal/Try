@@ -53,9 +53,9 @@
           document.getElementById("message").classList.remove("text-danger");
           document.getElementById("message").classList.add("text-success");
 
-          // Example: redirect to welcome.html after 1.5s
+          // ✅ redirect to home.html after 1.5s
           setTimeout(() => {
-            window.location.href = "welcome.html";
+            window.location.href = "home.html";
           }, 1500);
         } else {
           document.getElementById("message").textContent = "Invalid credentials.";
